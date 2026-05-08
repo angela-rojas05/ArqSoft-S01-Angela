@@ -1,8 +1,42 @@
 ﻿@model Catalogo.Models.Item
-<h1>@Model.Titulo</h1>
-<p><strong>Género:</strong> @Model.Genero</p>
-<p><strong>Consola:</strong> @Model.Consola</p>
-<p><strong>Año:</strong> @Model.Ano</p>
-<p><strong>Descripción:</strong> @Model.Descripcion</p>
-<hr />
-<a asp-action="Index">&larr; Volver al Catálogo</a>
+@{
+    ViewData["Title"] = Model.Titulo;
+}
+
+<div class="detalle-wrapper fade-content">
+
+    <a asp-action="Index" class="btn-back">← Volver al Catálogo</a>
+
+    <div class="detalle-card card mt-3">
+        <div class="card-glow"></div>
+
+        <div class="detalle-hero">
+            <div class="detalle-year-badge">@Model.Ano</div>
+            <h1 class="detalle-titulo floating">@Model.Titulo</h1>
+            <span class="detalle-genero-badge">@Model.Genero</span>
+        </div>
+
+        <div class="detalle-body p-4">
+            <div class="detalle-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">🎮 Consola</span>
+                    <span class="meta-value">@Model.Consola</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">🗂 Género</span>
+                    <span class="meta-value">@Model.Genero</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">📅 Año</span>
+                    <span class="meta-value">@Model.Ano</span>
+                </div>
+            </div>
+
+            <div class="detalle-descripcion">
+                <h3 class="desc-label">Descripción</h3>
+                <p class="desc-text">@Model.Descripcion</p>
+            </div>
+        </div>
+    </div>
+
+</div>

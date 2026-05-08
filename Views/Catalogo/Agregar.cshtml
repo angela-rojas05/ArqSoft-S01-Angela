@@ -1,32 +1,57 @@
 ﻿@model Catalogo.Models.Item
+@{
+    ViewData["Title"] = "Agregar Videojuego";
+}
 
-<h1>Agregar videojuego</h1>
-
-<form asp-action="Agregar" method="post">
-    <div>
-        <label>Título</label>
-        <input asp-for="Titulo" />
-    </div>
-    <div>
-        <label>Género</label>
-        <input asp-for="Genero" />
+<div class="agregar-wrapper fade-content">
+    <div class="agregar-header mb-4">
+        <h1 class="page-title">
+            <span class="title-glow">Agregar Videojuego</span>
+        </h1>
+        <p class="page-subtitle">Añade un nuevo juego a tu colección</p>
     </div>
 
-    <div>
-        <label>Consola</label>
-        <input asp-for="Consola" />
-    </div>
-    <div>
-        <label>Año</label>
-        <input asp-for="Ano" type="number" />
-    </div>
-    <div>
-        <label>Descripción</label>
-        <textarea asp-for="Descripcion"></textarea>
-    </div>
-    <button type="submit">Guardar</button>
-</form>
-    
-<hr />
+    <div class="form-card card">
+        <div class="card-glow"></div>
+        <div class="card-body p-4 p-md-5">
+            <form asp-action="Agregar" method="post" class="game-form">
 
-<a asp-action="Index">&larr; Cancelar</a>
+                <div class="form-row-grid">
+                    <div class="form-group-custom">
+                        <label class="form-label-custom" for="Titulo">Título del juego</label>
+                        <input asp-for="Titulo" class="form-control" placeholder="ej. The Legend of Zelda" id="Titulo" />
+                    </div>
+                    <div class="form-group-custom">
+                        <label class="form-label-custom" for="Genero">Género</label>
+                        <input asp-for="Genero" class="form-control" placeholder="ej. RPG, Acción, Plataformas" id="Genero" />
+                    </div>
+                </div>
+
+                <div class="form-row-grid">
+                    <div class="form-group-custom">
+                        <label class="form-label-custom" for="Consola">Consola / Plataforma</label>
+                        <input asp-for="Consola" class="form-control" placeholder="ej. PC, PlayStation 5" id="Consola" />
+                    </div>
+                    <div class="form-group-custom">
+                        <label class="form-label-custom" for="Ano">Año de lanzamiento</label>
+                        <input asp-for="Ano" type="number" class="form-control" placeholder="ej. 2024" id="Ano" min="1970" max="2030" />
+                    </div>
+                </div>
+
+                <div class="form-group-custom">
+                    <label class="form-label-custom" for="Descripcion">Descripción</label>
+                    <textarea asp-for="Descripcion" class="form-control form-textarea"
+                              placeholder="Describe de qué trata el juego..." id="Descripcion" rows="4"></textarea>
+                </div>
+
+                <div class="form-actions mt-4">
+                    <button type="submit" class="btn btn-primary btn-guardar">
+                        ✦ Guardar en Catálogo
+                    </button>
+                    <a asp-action="Index" class="btn-cancel">Cancelar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

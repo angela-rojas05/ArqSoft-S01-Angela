@@ -1,25 +1,54 @@
 ﻿@model List<Catalogo.Models.Item>
-<h1>Mi Catálogo</h1>
+@{
+    ViewData["Title"] = "Catálogo";
+}
 
-<!-- Filtro por género -->
-<div>
-    <a asp-action="Index">Todos</a>
-    @foreach (var gen in ViewBag.Generos as List<string>)
-    {
-        <span> | </span>
-        <a asp-action="Index" asp-route-genero="@gen">@gen</a>
-    }
+<div class="catalogo-header mb-4">
+    <h1 class="page-title floating">
+        <span class="title-glow">Mi Catálogo</span>
+        <span class="title-count">@Model.Count juegos</span>
+    </h1>
+    <p class="page-subtitle">Tu colección personal de videojuegos</p>
 </div>
-<hr />
 
-<!-- Lista de items -->
-<ul>
+<div class="filter-bar mb-4">
+    <span class="filter-label">Filtrar:</span>
+    <div class="filter-chips">
+        <a asp-action="Index" class="chip @(ViewBag.GeneroActual == null ? "chip-active" : "")">Todos</a>
+        @foreach (var gen in ViewBag.Generos as List<string>)
+        {
+            <a asp-action="Index" asp-route-genero="@gen"
+               class="chip @(ViewBag.GeneroActual == gen ? "chip-active" : "")">@gen</a>
+        }
+    </div>
+</div>
+
+<div class="games-grid">
     @foreach (var item in Model)
     {
-        <li>
-            <a asp-action="Detalle" asp-route-id="@item.Id">@item.Titulo</a>-- @item.Genero (@item.Ano)
-        </li>
+        <div class="game-card card" data-genero="@item.Genero">
+            <div class="card-glow"></div>
+            <div class="card-body p-4">
+                <div class="card-header-area">
+                    <span class="game-year">@item.Ano</span>
+                    <span class="game-genero">@item.Genero</span>
+                </div>
+                <h2 class="game-title">@item.Titulo</h2>
+                <div class="game-consola">🎮 @item.Consola</div>
+                <p class="game-desc">@item.Descripcion</p>
+                <div class="card-actions mt-3">
+                    <a asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-primary btn-sm">
+                        Ver detalle →
+                    </a>
+                </div>
+            </div>
+        </div>
     }
-</ul>
-<hr />
-<a asp-action="Agregar">+ Agregar Videojuego</a>
+</div>
+
+<div class="fab-container">
+    <a asp-action="Agregar" class="fab-btn" title="Agregar videojuego">
+        <span class="fab-icon">+</span>
+        <span class="fab-label">Agregar</span>
+    </a>
+</div>
