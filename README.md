@@ -11,13 +11,13 @@ Aplicación para administrar tu colección personal de videojuegos. Puedes ver t
 ## Capturas de pantalla
 
 ### Inicio
-![Inicio](screenshots/https://github.com/angela-rojas05/ArqSoft-S01-Angela/blob/master/wwwroot/screenshots/Captura%20de%20pantalla%202026-05-08%20233956.png)
+![Inicio](screenshots/Inicio.png)
 
 ### Catálogo
-![Catálogo](wwwroot/screenshots/Captura de pantalla 2026-05-08 234004.png)
+![Catálogo](screenshots/Catalogo.png)
 
 ### Detalle de videojuego
-![Detalle](wwwroot/screenshots/Captura de pantalla 2026-05-08 234016.png)
+![Detalle](screenshots/Detalle.png)
 
 ### Agregar videojuego
-![Agregar](wwwroot/screenshots/Captura de pantalla 2026-05-08 234023.png)
+![Agregar](screenshots/Agregar.png)
