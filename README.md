@@ -1,5 +1,11 @@
 # Catalogo de videojuegos - GameVerse 
 
+- **Nombre:** Ángela Yaritzi Rojas Brito
+- **Institución:** Tecnologico de Software
+- **Materia:** Arquitectura de Software
+- **Profesor:** Jorge Javier Pedrozo Romero
+- **Fecha:** Mayo 08, 2026
+
 Este es un sitio para gestionar tu colección personal de videojuegos. Puedes navegar tu catálogo, ver detalles de cada juego y agregar nuevos títulos fácilmente.
 
 ## Funcionalidades
