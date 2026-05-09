@@ -1,6 +1,13 @@
 # Catalogo de videojuegos - GameVerse 
 
-Aplicación para administrar tu colección personal de videojuegos. Puedes ver tu catálogo, consultar el detalle de cada juego y agregar nuevos títulos de tus juegos preferidos.
+Este es un sitio para gestionar tu colección personal de videojuegos. Puedes navegar tu catálogo, ver detalles de cada juego y agregar nuevos títulos fácilmente.
+
+## Funcionalidades
+
+- Visualiza todos tus juegos organizados
+- Filtra juegos por género
+- Consulta información completa de cada juego (consola, año, descripción)
+- Agrega nuevos juegos con un formulario simple
 
 ## Tecnologías usadas
 
@@ -21,3 +28,7 @@ Aplicación para administrar tu colección personal de videojuegos. Puedes ver t
 
 ### Agregar videojuego
 ![Agregar](wwwroot/screenshots/Agregar.png)
+
+## Clausula de IA
+
+En este proyecto existio el uso de IA, Claude AI. Claude ayudó en la creación de los estilos CSS personalizados, en el diseño visual del sitio web y en la escritura de parte del código JavaScript que hace que el sitio sea interactivo.
