@@ -432,7 +432,6 @@ body {
     font-size: 0.9rem;
     box-shadow: 0 8px 25px rgba(124,58,237,0.5);
     transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
-    animation: floating 3s ease-in-out infinite;
 }
 
     .fab-btn:hover {
