@@ -11,13 +11,13 @@ Aplicación para administrar tu colección personal de videojuegos. Puedes ver t
 ## Capturas de pantalla
 
 ### Inicio
-![Inicio](screenshots/inicio.png)
+![Inicio](wwwroot/screenshots/Captura de pantalla 2026-05-08 233956.png)
 
 ### Catálogo
-![Catálogo](screenshots/catalogo.png)
+![Catálogo](wwwroot/screenshots/Captura de pantalla 2026-05-08 234004.png)
 
 ### Detalle de videojuego
-![Detalle](screenshots/detalle.png)
+![Detalle](wwwroot/screenshots/Captura de pantalla 2026-05-08 234016.png)
 
 ### Agregar videojuego
-![Agregar](screenshots/agregar.png)
+![Agregar](wwwroot/screenshots/Captura de pantalla 2026-05-08 234023.png)
